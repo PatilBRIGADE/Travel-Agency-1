@@ -1,0 +1,834 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333333;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #333333;
+    width: 100%;
+    height: 10%;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+.nav-links {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: end;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #f58d54;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f58d54;
+    transition: width 0.3s ease;
+}
+
+header {
+    min-height: 140vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://assets.nicepagecdn.com/d2cc3eaa/5380758/images/camping-min.jpg') center/cover;
+    color: white;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+header p:first-child {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+header p:nth-child(4) {
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 2px;
+    line-height: 1.4;
+    font-weight: 300;
+    font-size: 1.5rem;
+    width: auto;
+}
+
+.header img {
+    height: 105px;
+    width: 330px;
+    margin-left: 13rem;
+}
+
+.header h2 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+}
+
+.header button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 1rem 2.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    justify-self: center;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 6rem;
+}
+
+.header button:hover {
+    background: white;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+/* :::::::::::::::::::::::::::::::::::Services::::::::::::::::::::::::::::::::::::::::::: */
+/* Add this to your existing CSS */
+.services {
+    background: #333;
+    padding: 4rem 2rem;
+    margin-top: 11rem;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin-left: 5rem;
+    margin-top: 50rem;
+}
+
+.card {
+    border: 2px solid #f58d54;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s;
+    background-color: #333;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: #f58d54;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin: 20px 0 0;
+}
+
+.card p {
+    margin: 20px 1px 0;
+    line-height: 2;
+    padding: 1rem;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: 29% 54%;
+    gap: 10rem;
+    max-width: 1200px;
+    margin: 8rem auto 0;
+    align-items: center;
+}
+
+.feature-content {
+    color: white;
+}
+
+.feature-content h2 {
+    color: #f58d54;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.feature-content p{
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 2;
+    margin: 46px 0 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.feature-image {
+    position: relative;
+}
+
+.feature-content button{
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 1rem 2.5rem;
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    justify-self: center;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.feature-content button:hover {
+    background: white;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.feature-image img {
+    width: 100%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.circle-1, .circle-2 {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-1 {
+    width: 200px;
+    height: 200px;
+    top: -42px;
+    right: -25px;
+    border: 30px solid rgb(245, 141, 84);
+}
+
+.circle-2 {
+    width: 108px;
+    height: 108px;
+    top: 175px;
+    right: 593px;
+    border: 21px solid rgb(245, 141, 84);
+}
+
+.waves {
+    position: absolute;
+    bottom: 48px;
+    right: 364px;
+    z-index: 2;
+    width: 350px;
+    height: 150px;
+}
+
+.waves::before,
+.waves::after {
+    content: '';
+    position: absolute;
+    background: #f58d54;
+    border-radius: 10px;
+}
+
+.waves::before {
+    transform: rotate(181deg);;
+}
+
+.waves::after {
+    top: 20px;
+    transform: rotate(181deg);
+}
+/* ::::::::::::::::::::::::::::::::::::::::::::backpacking::::::::::::::::::::::::::;;;;; */
+.backpacking {
+    background: #333;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.circles-container {
+    position: relative;
+    height: 400px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.forest {
+    width: 276px;
+    height: 276px;
+    left: -6%;
+    top: 10%;
+}
+
+.mountain {
+    width: 628px;
+    height: 628px;
+    right: -17%;
+    top: 0;
+    border: 8px solid white;
+}
+
+.sunset {
+    width: 389px;
+    height: 389px;
+    left: 11%;
+    top: 112%;
+    border: 17px solid #f58d54;
+}
+
+.decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    width: 119px;
+    height: 119px;
+}
+
+.decorative-circle.orange {
+    border: 20px solid #f58d54;
+    left: -11%;
+    top: 89%;
+}
+
+.decorative-circle.gray {
+    border: 26px solid #666;
+    right: -23%;
+    bottom: -85%;
+    width: 250px;
+    height: 250px;
+}
+
+.content {
+    max-width: 960px;
+    margin: 32rem auto
+}
+
+.content h2 {
+    font-size: 3.75rem;
+    margin-bottom: 1.5rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+}
+
+.content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 2.3rem;
+    margin: 20px 0 2rem;
+    font-family: "Lato", sans-serif;
+}
+
+button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 1rem 2.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: #333;
+}
+/* ::::::::::::::::::::::::::::::::::::Group Travel:::::::::::::::::::::::::::: */
+.group-travel {
+    background: #333;
+    padding: 4rem 2rem;
+    color: white;
+    margin-top: -30rem;
+}
+
+.group-travel h2 {
+    font-size: 3.75rem;
+    max-width: 700px;
+    line-height: 1.1;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    margin: 0 auto 4rem 5rem;
+    text-align: left;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 32% 43%;
+    gap: 8rem;
+    max-width: 1200px;
+    margin: 0 auto 0 10rem;
+    align-items: center;
+}
+
+article {
+    background: white;
+    color: #333;
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+article p {
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+
+.content-wrapper button {
+    background: transparent;
+    color: #f58d54;
+    border: 2px solid #f58d54;
+    padding: 1rem 2.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #f58d54;
+    color: white;
+}
+
+figure {
+    position: relative;
+}
+
+figure img {
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+/* ::::::::::::::::::::::::::::::::::::::::::Adventure:::::::::::::::::::::::::::::::::; */
+.adventures {
+    background: #333;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: -108px;
+}
+
+.adventures h2 {
+    font-size: 3.75rem;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    padding: 1rem;
+    line-height: 1.1;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cards-grid article {
+    background: white;
+    border-radius: 10px;
+    padding: 4rem;
+    color: #333;
+}
+
+.cards-grid article img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    margin-right: 5rem;
+}
+
+.cards-grid article h3 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-family: "Lato", sans-serif;
+    text-align: left;
+}
+
+.cards-grid article p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: left;
+    font-size: 1.25rem;
+    margin: 27px 0 1.5rem;
+    line-height: 2;
+    color: #808080 !important;
+}
+
+.cards-grid article a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+}
+
+.cards-grid article a span {
+    position: relative;
+    right: 6rem;
+    font-size: 1rem;
+}
+
+.cards-grid article a span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: #333;
+    transition: width 0.3s;
+}
+
+.cards-grid article a:hover span::after {
+    width: 0;
+}
+/* :::::::::::::::::::::::::::::::::::::::::adventure-1:::::::::::::::::::::::::::::::; */
+.adventure-1 {
+    background: #333;
+    padding: 0rem 2rem;
+    min-height: 100vh;
+    place-items: center;
+    margin-top: -9rem;
+    margin-bottom: 2rem;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    align-items: center;
+    position: relative;
+}
+
+.figure-1 {
+    position: relative;
+}
+
+.figure-1 img {
+    width: 620px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 4px 2px 20px black;
+}
+
+.circle-3 {
+    position: absolute;
+    width: 168px;
+    height: 168px;
+    background: #f58d54;
+    border-radius: 50%;
+    bottom: -9px;
+    left: -20px;
+}
+
+.circle-gray-1 {
+    position: absolute;
+    width: 246px;
+    height: 246px;
+    border: 50px solid #4d4d4d;
+    border-radius: 72%;
+    top: -2%;
+    right: -540px;
+}
+
+article {
+    background: white;
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+.info h2 {
+    font-size: 3.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-family: Lato, sans-serif;
+}
+
+.info {
+    margin-top: 43rem;
+    z-index: 2;
+    width: 36rem;
+    margin-left: -5rem;
+}
+
+.info p {
+    line-height: 2;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 26px 0 0;
+    color: #666;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.info button {
+    background: #f58d54;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.info button:hover {
+    transform: translateY(-2px);
+}
+/* ::::::::::::::::::::::::::::::::testimonials:::::::::::::::::::::::::::::: */
+.testimonials {
+    background: #333;
+    padding: 4rem 9rem;
+    margin-top: 7rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+blockquote {
+    position: relative;
+    padding: 2rem;
+    color: white;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 4rem;
+    color: #f58d54;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    line-height: 1;
+}
+
+blockquote p {
+    margin: 20px 0 0;
+    line-height: 2;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+blockquote cite {
+    display: block;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    margin: 20px auto 0 0;
+    text-align: left;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    font-family: Lato, sans-serif;
+}
+/* :::::::::::::::::::::::::::::::::Natures Tours::::::::::::::::::::::::: */
+.nature-tours {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://assets.nicepagecdn.com/d2cc3eaa/5380758/images/man-with-rucksack-admires-gorgeous-mountain-555.jpg') center/cover;
+    display: grid;
+    place-items: center;
+    color: white;
+    padding: 2rem;
+}
+
+.content-2 {
+    max-width: 600px;
+    text-align: left;
+    margin-right: 43rem;
+}
+
+.content-2 h1 {
+    font-size: 3.75rem;
+    line-height: 1.1;
+    margin: 0;
+    font-weight: 700;
+    font-family: Lato, sans-serif;
+    text-align: left;
+    color: white;
+}
+
+.content-2 p {
+    letter-spacing: 1px;
+    font-size: 1.125rem;
+    margin: 20px 0 0;
+    color: #ffffff !important;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover {
+    color: #f58d54;
+    transform: rotate(360deg);
+}
+/* ::::::::::::::::::::::::::::::::::Contact:::::::::::::::::::::::::;;;;;;;;: */
+.contact {
+    background: #333;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+}
+
+.contact h2 {
+    font-size: 3.75rem;
+    margin-bottom: 3rem;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    background: #444;
+    border: none;
+    border-bottom: 1px solid #f58d54;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+    margin-bottom: 2rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+.bt button {
+    color: #ffffff !important;
+    background-color: #f58d54 !important;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.125rem;
+    margin-left: auto;
+    width: 100%;
+    font-weight: 700;
+    padding: 20px 0 21px;
+    text-align: center;
+}
+
+.bt button:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px #f58d54;
+}
+/* ::::::::::::::::::::::::::::::::::Footer:::::::::::::::::::::::::::::: */
+footer {
+    color: #ffffff;
+    background-color: #293233;
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
+}
+
+footer p {
+    width: 417px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.8;
+    font-size: 0.875rem;
+    text-align: center;
+}
